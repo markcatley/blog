@@ -11,7 +11,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://blog.catley.net.nz',
-        urlSSL: 'https://radiant-river-1086.herokuapp.com'
+        urlSSL: 'https://radiant-river-1086.herokuapp.com',
         forceAdminSSL: true,
         mail: {},
         database: {
