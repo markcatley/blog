@@ -13,7 +13,16 @@ config = {
         url: 'http://blog.catley.net.nz',
         urlSSL: 'https://radiant-river-1086.herokuapp.com',
         forceAdminSSL: true,
-        mail: {},
+        mail: {
+          transport: 'SMTP',
+          options: {
+            service: 'Mailgun',
+            auth: {
+              user: process.env.MAILGUN_SMTP_LOGIN,
+              pass: process.env.MAILGUN_SMTP_PASSWORD
+            }
+          }
+        },
         database: {
             client: 'postgres',
             connection: process.env.DATABASE_URL,
